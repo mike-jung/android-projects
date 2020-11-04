@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/input1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="지번 입력"
+            android:inputType="textPersonName"
+            android:text="경기도 양평군 양평읍 회현리 616-66" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="찾기" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/type1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일반" />
+
+        <Button
+            android:id="@+id/type2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="위성" />
+
+        <Button
+            android:id="@+id/type3Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지형" />
+
+        <Button
+            android:id="@+id/type4Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지적편집도" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/output1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="용도지역"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/output2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="지목"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/output3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="면적"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:text="" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/output4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="실거래가"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/output5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="거래일"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/output6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="평당가격"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:text="" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.naver.maps.map.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#87D7FD">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/logOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

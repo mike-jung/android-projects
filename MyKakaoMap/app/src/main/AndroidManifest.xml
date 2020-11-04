@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.techtown.land">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyKakaoMap">
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="bfefb491fd65022691ac04b6fd4c2458"/>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".demos.MapViewDemoActivity"
+            android:label="@string/map_view_demo_title"></activity>
+        <activity
+            android:name=".demos.MarkerDemoActivity"
+            android:label="@string/marker_demo_title"></activity>
+        <activity
+            android:name=".demos.PolygonDemoActivity"
+            android:label="@string/polygon_demo_title"></activity>
+        <activity
+            android:name=".demos.LocationDemoActivity"
+            android:label="@string/location_demo_title"></activity>
+        <activity
+            android:name=".demos.CameraDemoActivity"
+            android:label="@string/camera_demo_title"></activity>
+        <activity
+            android:name=".demos.EventsDemoActivity"
+            android:label="@string/events_demo_title"></activity>
+        <activity
+            android:name=".demos.runtimePermissions.AppPermissionHandlerActivity"
+            android:label="@string/search_demo_title"></activity>
+
+
+    </application>
+
+</manifest>
